@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>New Sails App</title>
+
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    
+    <!--  
+        Stylesheets and Preprocessors
+        ==============================
+
+        You can always bring in CSS files manually with `<link>` tags, or asynchronously
+        using a solution like AMD (RequireJS).  Or, if you like, you can take advantage 
+        of Sails' conventional asset pipeline (boilerplate Gruntfile).
+
+        By default, stylesheets from your `assets/styles` folder are included
+        here automatically (between STYLES and STYLES END). Both CSS (.css) and LESS (.less)
+        are supported. In production, your styles will be minified and concatenated into
+        a single file.
+        
+        To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
+        For example, here are a few things you could do:
+            
+            + Change the order of your CSS files
+            + Import stylesheets from other directories
+            + Use a different or additional preprocessor, like SASS, SCSS or Stylus
+    -->
+
+    <!--STYLES-->
+    <link rel="stylesheet" href="/styles/importer.css">
+    <link rel="stylesheet" href="/styles/style-responsive.css">
+    <link rel="stylesheet" href="/styles/themes/style1/blue-dark.css">
+    <link rel="stylesheet" href="/styles/themes/style1/blue-grey.css">
+    <link rel="stylesheet" href="/styles/themes/style1/green-blue.css">
+    <link rel="stylesheet" href="/styles/themes/style1/green-dark.css">
+    <link rel="stylesheet" href="/styles/themes/style1/green-grey.css">
+    <link rel="stylesheet" href="/styles/themes/style1/orange-blue.css">
+    <link rel="stylesheet" href="/styles/themes/style1/orange-grey.css">
+    <link rel="stylesheet" href="/styles/themes/style1/orange-violet.css">
+    <link rel="stylesheet" href="/styles/themes/style1/pink-blue.css">
+    <link rel="stylesheet" href="/styles/themes/style1/pink-brown.css">
+    <link rel="stylesheet" href="/styles/themes/style1/pink-dark.css">
+    <link rel="stylesheet" href="/styles/themes/style1/pink-green.css">
+    <link rel="stylesheet" href="/styles/themes/style1/pink-grey.css">
+    <link rel="stylesheet" href="/styles/themes/style1/pink-violet.css">
+    <link rel="stylesheet" href="/styles/themes/style1/red-dark.css">
+    <link rel="stylesheet" href="/styles/themes/style1/red-grey.css">
+    <link rel="stylesheet" href="/styles/themes/style1/yellow-blue.css">
+    <link rel="stylesheet" href="/styles/themes/style1/yellow-dark.css">
+    <link rel="stylesheet" href="/styles/themes/style1/yellow-green.css">
+    <link rel="stylesheet" href="/styles/themes/style1/yellow-grey.css">
+    <link rel="stylesheet" href="/styles/themes/style2/blue-dark.css">
+    <link rel="stylesheet" href="/styles/themes/style2/blue-grey.css">
+    <link rel="stylesheet" href="/styles/themes/style2/green-blue.css">
+    <link rel="stylesheet" href="/styles/themes/style2/green-dark.css">
+    <link rel="stylesheet" href="/styles/themes/style2/green-grey.css">
+    <link rel="stylesheet" href="/styles/themes/style2/orange-blue.css">
+    <link rel="stylesheet" href="/styles/themes/style2/orange-grey.css">
+    <link rel="stylesheet" href="/styles/themes/style2/orange-violet.css">
+    <link rel="stylesheet" href="/styles/themes/style2/pink-blue.css">
+    <link rel="stylesheet" href="/styles/themes/style2/pink-brown.css">
+    <link rel="stylesheet" href="/styles/themes/style2/pink-dark.css">
+    <link rel="stylesheet" href="/styles/themes/style2/pink-green.css">
+    <link rel="stylesheet" href="/styles/themes/style2/pink-grey.css">
+    <link rel="stylesheet" href="/styles/themes/style2/pink-violet.css">
+    <link rel="stylesheet" href="/styles/themes/style2/red-dark.css">
+    <link rel="stylesheet" href="/styles/themes/style2/red-grey.css">
+    <link rel="stylesheet" href="/styles/themes/style2/yellow-blue.css">
+    <link rel="stylesheet" href="/styles/themes/style2/yellow-dark.css">
+    <link rel="stylesheet" href="/styles/themes/style2/yellow-green.css">
+    <link rel="stylesheet" href="/styles/themes/style2/yellow-grey.css">
+    <link rel="stylesheet" href="/styles/themes/style3/blue-dark.css">
+    <link rel="stylesheet" href="/styles/themes/style3/blue-grey.css">
+    <link rel="stylesheet" href="/styles/themes/style3/green-blue.css">
+    <link rel="stylesheet" href="/styles/themes/style3/green-dark.css">
+    <link rel="stylesheet" href="/styles/themes/style3/green-grey.css">
+    <link rel="stylesheet" href="/styles/themes/style3/orange-blue.css">
+    <link rel="stylesheet" href="/styles/themes/style3/orange-grey.css">
+    <link rel="stylesheet" href="/styles/themes/style3/orange-violet.css">
+    <link rel="stylesheet" href="/styles/themes/style3/pink-blue.css">
+    <link rel="stylesheet" href="/styles/themes/style3/pink-brown.css">
+    <link rel="stylesheet" href="/styles/themes/style3/pink-dark.css">
+    <link rel="stylesheet" href="/styles/themes/style3/pink-green.css">
+    <link rel="stylesheet" href="/styles/themes/style3/pink-grey.css">
+    <link rel="stylesheet" href="/styles/themes/style3/pink-violet.css">
+    <link rel="stylesheet" href="/styles/themes/style3/red-dark.css">
+    <link rel="stylesheet" href="/styles/themes/style3/red-grey.css">
+    <link rel="stylesheet" href="/styles/themes/style3/yellow-blue.css">
+    <link rel="stylesheet" href="/styles/themes/style3/yellow-dark.css">
+    <link rel="stylesheet" href="/styles/themes/style3/yellow-green.css">
+    <link rel="stylesheet" href="/styles/themes/style3/yellow-grey.css">
+    <!--STYLES END-->
+  </head>
+
+  <body>
+    <%- body %>
+
+
+
+    <!--
+        Client-side Templates
+        ========================
+
+        HTML templates are important prerequisites of modern, rich client applications.
+        To work their magic, frameworks like Backbone, Angular, Ember, and Knockout require
+        that you load these templates client-side.
+
+        By default, your Gruntfile is configured to automatically load and precompile
+        client-side JST templates in your `assets/templates` folder, then
+        include them here automatically (between TEMPLATES and TEMPLATES END).
+        
+        To customize this behavior to fit your needs, just edit `tasks/pipeline.js`.
+        For example, here are a few things you could do:
+
+            + Import templates from other directories
+            + Use a different template engine (handlebars, jade, dust, etc.)
+            + Internationalize your client-side templates using a server-side
+              stringfile before they're served.
+    -->
+
+    <!--TEMPLATES-->
+    <script type="text/javascript" src="/jst.js"></script>
+    <!--TEMPLATES END-->
+
+
+    <!--
+
+      Client-side Javascript
+      ========================
+
+      You can always bring in JS files manually with `script` tags, or asynchronously
+      on the client using a solution like AMD (RequireJS).  Or, if you like, you can 
+      take advantage of Sails' conventional asset pipeline (boilerplate Gruntfile).
+
+      By default, files in your `assets/js` folder are included here
+      automatically (between SCRIPTS and SCRIPTS END).  Both JavaScript (.js) and
+      CoffeeScript (.coffee) are supported. In production, your scripts will be minified
+      and concatenated into a single file.
+      
+      To customize any part of the built-in behavior, just edit `tasks/pipeline.js`.
+      For example, here are a few things you could do:
+          
+          + Change the order of your scripts
+          + Import scripts from other directories
+          + Use a different preprocessor, like TypeScript
+
+    -->
+
+    <!--SCRIPTS-->
+    <script src="/js/dependencies/sails.io.js"></script>
+    <script src="/js/dependencies/controllers/app.js"></script>
+    <script src="/js/dependencies/controllers/charts-chartjs.js"></script>
+    <script src="/js/dependencies/controllers/charts-flotchart.js"></script>
+    <script src="/js/dependencies/controllers/charts-highchart-area.js"></script>
+    <script src="/js/dependencies/controllers/charts-highchart-column-bar.js"></script>
+    <script src="/js/dependencies/controllers/charts-highchart-combinations.js"></script>
+    <script src="/js/dependencies/controllers/charts-highchart-dynamic.js"></script>
+    <script src="/js/dependencies/controllers/charts-highchart-line.js"></script>
+    <script src="/js/dependencies/controllers/charts-highchart-more.js"></script>
+    <script src="/js/dependencies/controllers/charts-highchart-pie.js"></script>
+    <script src="/js/dependencies/controllers/charts-highchart-scatter-bubble.js"></script>
+    <script src="/js/dependencies/controllers/data.js"></script>
+    <script src="/js/dependencies/controllers/email-compose-mail.js"></script>
+    <script src="/js/dependencies/controllers/email-inbox.js"></script>
+    <script src="/js/dependencies/controllers/extra-404.js"></script>
+    <script src="/js/dependencies/controllers/extra-500.js"></script>
+    <script src="/js/dependencies/controllers/extra-lock-screen.js"></script>
+    <script src="/js/dependencies/controllers/extra-profile.js"></script>
+    <script src="/js/dependencies/controllers/extra-signin.js"></script>
+    <script src="/js/dependencies/controllers/extra-signup.js"></script>
+    <script src="/js/dependencies/controllers/extra-user-list.js"></script>
+    <script src="/js/dependencies/controllers/form-basic.js"></script>
+    <script src="/js/dependencies/controllers/form-components.js"></script>
+    <script src="/js/dependencies/controllers/form-dropzone-file-upload.js"></script>
+    <script src="/js/dependencies/controllers/form-layouts.js"></script>
+    <script src="/js/dependencies/controllers/form-multiple-file-upload.js"></script>
+    <script src="/js/dependencies/controllers/form-validation.js"></script>
+    <script src="/js/dependencies/controllers/form-wizard.js"></script>
+    <script src="/js/dependencies/controllers/form-xeditable.js"></script>
+    <script src="/js/dependencies/controllers/grid-datepicker.js"></script>
+    <script src="/js/dependencies/controllers/grid-deep-linking.js"></script>
+    <script src="/js/dependencies/controllers/grid-double-sort.js"></script>
+    <script src="/js/dependencies/controllers/grid-filter-with-select.js"></script>
+    <script src="/js/dependencies/controllers/grid-filter-with-ul-li.js"></script>
+    <script src="/js/dependencies/controllers/grid-hidden-sort.js"></script>
+    <script src="/js/dependencies/controllers/grid-layout-2-table.js"></script>
+    <script src="/js/dependencies/controllers/grid-layout-div.js"></script>
+    <script src="/js/dependencies/controllers/grid-layout-table-1.js"></script>
+    <script src="/js/dependencies/controllers/grid-layout-table-2.js"></script>
+    <script src="/js/dependencies/controllers/grid-layout-ul-li.js"></script>
+    <script src="/js/dependencies/controllers/grid-pagination-only.js"></script>
+    <script src="/js/dependencies/controllers/grid-range-slider.js"></script>
+    <script src="/js/dependencies/controllers/grid-without-item-per-page.js"></script>
+    <script src="/js/dependencies/controllers/layout-header-topbar.js"></script>
+    <script src="/js/dependencies/controllers/layout-title-breadcrumb.js"></script>
+    <script src="/js/dependencies/controllers/main.js"></script>
+    <script src="/js/dependencies/controllers/none.js"></script>
+    <script src="/js/dependencies/controllers/page-calendar.js"></script>
+    <script src="/js/dependencies/controllers/page-contact.js"></script>
+    <script src="/js/dependencies/controllers/page-gallery.js"></script>
+    <script src="/js/dependencies/controllers/table-action.js"></script>
+    <script src="/js/dependencies/controllers/table-advanced.js"></script>
+    <script src="/js/dependencies/controllers/table-datatables.js"></script>
+    <script src="/js/dependencies/controllers/table-editable.js"></script>
+    <script src="/js/dependencies/controllers/table-export.js"></script>
+    <script src="/js/dependencies/controllers/table-filter.js"></script>
+    <script src="/js/dependencies/controllers/table-sample.js"></script>
+    <script src="/js/dependencies/controllers/ui-checkbox-radio.js"></script>
+    <script src="/js/dependencies/controllers/ui-dropdown-select.js"></script>
+    <script src="/js/dependencies/controllers/ui-editors.js"></script>
+    <script src="/js/dependencies/controllers/ui-generals.js"></script>
+    <script src="/js/dependencies/controllers/ui-modals.js"></script>
+    <script src="/js/dependencies/controllers/ui-nestable-list.js"></script>
+    <script src="/js/dependencies/controllers/ui-notific8-notifications.js"></script>
+    <script src="/js/dependencies/controllers/ui-portlets.js"></script>
+    <script src="/js/dependencies/controllers/ui-progressbars.js"></script>
+    <script src="/js/dependencies/controllers/ui-sliders.js"></script>
+    <script src="/js/dependencies/controllers/ui-tabs.js"></script>
+    <script src="/js/dependencies/controllers/ui-toastr-notifications.js"></script>
+    <script src="/js/dependencies/controllers/ui-treeview.js"></script>
+    <script src="/js/dependencies/directives/ngAccordion.js"></script>
+    <script src="/js/dependencies/directives/ngAnimation.js"></script>
+    <script src="/js/dependencies/directives/ngAreachartspline.js"></script>
+    <script src="/js/dependencies/directives/ngDropzone.js"></script>
+    <script src="/js/dependencies/directives/ngGeneraltab.js"></script>
+    <script src="/js/dependencies/directives/ngMenu.js"></script>
+    <script src="/js/dependencies/directives/ngTab.js"></script>
+    <script src="/js/dependencies/directives/ngTheme.js"></script>
+    <script src="/js/dependencies/directives/ngZabutocalendar.js"></script>
+    <script src="/js/dependencies/directives/scrollSpy.js"></script>
+    <script src="/js/app.js"></script>
+    <script src="/js/libs/angular-route.js"></script>
+    <script src="/js/libs/angular-ui-router.js"></script>
+    <script src="/js/libs/angular.js"></script>
+    <script src="/js/libs/jquery.min.js"></script>
+    <script src="/js/libs/ocLazyLoad.js"></script>
+    <script src="/js/libs/ui-bootstrap.js"></script>
+    <script src="/js/main.js"></script>
+    <!--SCRIPTS END-->
+  </body>
+</html>

@@ -1,0 +1,527 @@
+.sidebar-collapse.menu-scroll
+    ul#side-menu.nav.admin-nav-main(ng-menu="")
+        li.user-panel
+            .thumb
+                img.img-circle(src='https://s3.amazonaws.com/uifaces/faces/twitter/kolage/128.jpg', alt='')
+            .info
+                p John Doe
+                ul.list-inline.list-unstyled
+                    li
+                        a(ui-sref='extra-profile', data-hover='tooltip', title='Profile')
+                            i.fa.fa-user
+                    li
+                        a(ui-sref='email-inbox', data-hover='tooltip', title='Mail')
+                            i.fa.fa-envelope
+                    li
+                        a(href='javascript:void(0);', data-hover='tooltip', title='Setting', data-toggle="modal", data-target="#modal-config")
+                            i.fa.fa-cog
+                    li
+                        a(ui-sref='extra-signin', data-hover='tooltip', title='Logout')
+                            i.fa.fa-sign-out
+            .clearfix
+        li
+            a(ui-sref='index')
+                i.fa.fa-tachometer.fa-fw
+                    .icon-bg.bg-orange
+                span.menu-title Dashboard
+        li
+            a(href='javascript:void(0);')
+                i.fa.fa-laptop.fa-fw
+                    .icon-bg.bg-pink
+                span.menu-title Frontend
+                span.fa.arrow
+                span.label.label-yellow v3.0
+            ul.nav.nav-second-level
+                li
+                    a(ui-sref='frontend-one-page')
+                        i.fa.fa-rocket
+                        span.submenu-title One Page
+        li
+            a(href='javascript:void(0);')
+                i.fa.fa-desktop.fa-fw
+                    .icon-bg.bg-pink
+                span.menu-title Layouts
+                span.fa.arrow
+            ul.nav.nav-second-level
+                li
+                    a(ui-sref="layout-left-sidebar")
+                        i.fa.fa-align-left
+                        span.submenu-title Left Sidebar
+                li
+                    a(ui-sref="layout-left-sidebar-collapsed")
+                        i.fa.fa-angle-double-left
+                        span.submenu-title Left Sidebar Collapsed
+                li
+                    a(ui-sref="layout-right-sidebar")
+                        i.fa.fa-align-right
+                        span.submenu-title Right Sidebar
+                li
+                    a(ui-sref="layout-right-sidebar-collapsed")
+                        i.fa.fa-angle-double-right
+                        span.submenu-title Right Sidebar Collapsed
+                li
+                    a(ui-sref="layout-horizontal-menu")
+                        i.fa.fa-header
+                        span.submenu-title Horizontal Menu
+                li
+                    a(ui-sref="layout-horizontal-menu-sidebar")
+                        i.fa.fa-h-square
+                        span.submenu-title Horizontal Menu & Sidebar
+                li
+                    a(ui-sref="layout-fixed-topbar")
+                        i.fa.fa-magnet
+                        span.submenu-title Fixed Topbar
+                li
+                    a(ui-sref="layout-boxed")
+                        i.fa.fa-columns
+                        span.submenu-title Boxed Layout
+                li
+                    a(ui-sref="layout-hidden-footer")
+                        i.fa.fa-eye-slash
+                        span.submenu-title Hidden Footer
+                li
+                    a(ui-sref="layout-header-topbar")
+                        i.fa.fa-paperclip
+                        span.submenu-title Header & Topbar
+                li
+                    a(ui-sref="layout-title-breadcrumb")
+                        i.fa.fa-link
+                        span.submenu-title Title & Breadcrumb
+        li
+            a(href='javascript:void(0);')
+                i.fa.fa-send-o.fa-fw
+                    .icon-bg.bg-green
+                span.menu-title UI Elements
+                span.fa.arrow
+            ul.nav.nav-second-level
+                li
+                    a(ui-sref='ui-generals')
+                        i.fa.fa-briefcase
+                        span.submenu-title Generals
+                li
+                    a(ui-sref='ui-portlets')
+                        i.fa.fa-instagram
+                        span.submenu-title Portlets
+                li
+                    a(ui-sref='ui-buttons')
+                        i.fa.fa-hand-o-up
+                        span.submenu-title Buttons
+                li
+                    a(ui-sref='ui-tabs')
+                        i.fa.fa-trello
+                        span.submenu-title Tabs
+                li
+                    a(ui-sref='ui-progressbars')
+                        i.fa.fa-ellipsis-h
+                        span.submenu-title Progress Bars
+                li
+                    a(ui-sref='ui-editors')
+                        i.fa.fa-edit
+                        span.submenu-title Editors
+                li
+                    a(ui-sref='ui-typography')
+                        i.fa.fa-font
+                        span.submenu-title Typography
+                li
+                    a(ui-sref='ui-modals')
+                        i.fa.fa-list-alt
+                        span.submenu-title Modals
+                li
+                    a(ui-sref='ui-sliders')
+                        i.fa.fa-arrows-h
+                        span.submenu-title Sliders
+                li
+                    a(ui-sref='ui-nestable-list')
+                        i.fa.fa-list-ol
+                        span.submenu-title Nestable List
+                li
+                    a(ui-sref='ui-dropdown-select')
+                        i.fa.fa-level-down
+                        span.submenu-title Dropdown Select
+                        span.label.label-yellow v2.1
+                li
+                    a(ui-sref='ui-icons')
+                        i.fa.fa-tint
+                        span.submenu-title Icons
+                li
+                    a(ui-sref='ui-notific8-notifications')
+                        i.fa.fa-exclamation-circle
+                        span.submenu-title Notific8 & Message
+                        span.label.label-blue v2.1
+                li
+                    a(ui-sref='ui-toastr-notifications')
+                        i.fa.fa-exclamation-triangle
+                        span.submenu-title Toastr Notifications
+                li
+                    a(ui-sref='ui-checkbox-radio')
+                        i.fa.fa-dot-circle-o
+                        span.submenu-title Checkbox & Radio
+                li
+                    a(ui-sref='ui-treeview')
+                        i.fa.fa-tasks
+                        span.submenu-title Tree View
+                li
+                    a(ui-sref='ui-panels')
+                        i.fa.fa-th-large
+                        span.submenu-title Panels
+        li
+            a(href='javascript:void(0);')
+                i.fa.fa-edit.fa-fw
+                    .icon-bg.bg-violet
+                span.menu-title Forms
+                span.fa.arrow
+            ul.nav.nav-second-level
+                li
+                    a(ui-sref='form-layouts')
+                        i.fa.fa-columns
+                        span.submenu-title Form Layouts
+                li
+                    a(ui-sref='form-basic')
+                        i.fa.fa-file-text-o
+                        span.submenu-title Form Basics
+                li
+                    a(ui-sref='form-components')
+                        i.fa.fa-cubes
+                        span.submenu-title Form Components
+                li
+                    a(ui-sref='form-wizard')
+                        i.fa.fa-magic
+                        span.submenu-title Form Wizard
+                li
+                    a(ui-sref='form-validation')
+                        i.fa.fa-exclamation
+                        span.submenu-title Form Validation
+                li
+                    a(ui-sref='form-multiple-file-upload')
+                        i.fa.fa-upload
+                        span.submenu-title Multiple File Upload
+                li
+                    a(ui-sref='form-dropzone-file-upload')
+                        i.fa.fa-cloud-upload
+                        span.submenu-title Dropzone File Upload
+        li
+            a(href='javascript:void(0);')
+                i.fa.fa-th-list.fa-fw
+                    .icon-bg.bg-blue
+                span.menu-title Tables
+                span.fa.arrow
+                span.label.label-pink New
+            ul.nav.nav-second-level
+                li
+                    a(ui-sref='table-basic')
+                        i.fa.fa-th-large
+                        span.submenu-title Basic Tables
+                li
+                    a(ui-sref='table-responsive')
+                        i.fa.fa-tablet
+                        span.submenu-title Responsive Tables
+                li
+                    a(ui-sref='table-action')
+                        i.fa.fa-tencent-weibo
+                        span.submenu-title Action Tables
+                li
+                    a(ui-sref='table-filter')
+                        i.fa.fa-filter
+                        span.submenu-title Filter Tables
+                li
+                    a(ui-sref='table-advanced')
+                        i.fa.fa-indent
+                        span.submenu-title Advanced Tables
+                li
+                    a(ui-sref='table-export')
+                        i.fa.fa-paperclip
+                        span.submenu-title Table Export
+                        span.label.label-yellow v2.1
+                li
+                    a(ui-sref='table-editable')
+                        i.fa.fa-list-alt
+                        span.submenu-title Jeditable
+                        span.label.label-blue v2.0
+                li
+                    a(ui-sref='table-datatables')
+                        i.fa.fa-list-alt
+                        span.submenu-title DataTables
+                        span.label.label-pink v2.0
+                li
+                    a(ui-sref='table-sample')
+                        i.fa.fa-table
+                        span.submenu-title Sample Tables
+        li
+            a(href='javascript:void(0);')
+                i.fa.fa-database.fa-fw
+                    .icon-bg.bg-red
+                span.menu-title Data Grids
+                span.fa.arrow
+                span.label.label-yellow Hot
+            ul.nav.nav-second-level
+                li
+                    a(href='javascript:void(0);')
+                        i.fa.fa-th-large
+                        span.submenu-title Layout Examples
+                        span.fa.arrow
+                    ul.nav.nav-third-level
+                        li
+                            a(ui-sref='grid-layout-div')
+                                i.fa.fa-angle-right
+                                span.submenu-title DIVs Layout
+                        li
+                            a(ui-sref='grid-layout-table-1')
+                                i.fa.fa-angle-right
+                                span.submenu-title Table Demo 1
+                        li
+                            a(ui-sref='grid-layout-table-2')
+                                i.fa.fa-angle-right
+                                span.submenu-title Table Demo 2
+                        li
+                            a(ui-sref='grid-layout-2-table')
+                                i.fa.fa-angle-right
+                                span.submenu-title 2 Tables on the Page
+                        li
+                            a(ui-sref='grid-layout-ul-li')
+                                i.fa.fa-angle-right
+                                span.submenu-title UL LI
+                li
+                    a(href='javascript:void(0);')
+                        i.fa.fa-tencent-weibo
+                        span.submenu-title Actions Examples
+                        span.fa.arrow
+                    ul.nav.nav-third-level
+                        li
+                            a(ui-sref='grid-filter-with-ul-li')
+                                i.fa.fa-angle-right
+                                span.submenu-title Filters With UL/LI
+                        li
+                            a(ui-sref='grid-filter-with-select')
+                                i.fa.fa-angle-right
+                                span.submenu-title Filters With SELECT
+                        li
+                            a(ui-sref='grid-deep-linking')
+                                i.fa.fa-angle-right
+                                span.submenu-title Deep Linking
+                        li
+                            a(ui-sref='grid-pagination-only')
+                                i.fa.fa-angle-right
+                                span.submenu-title Pagination Only
+                        li
+                            a(ui-sref='grid-without-item-per-page')
+                                i.fa.fa-angle-right
+                                span.submenu-title Without "Items per Page"
+                        li
+                            a(ui-sref='grid-hidden-sort')
+                                i.fa.fa-angle-right
+                                span.submenu-title Hidden Sort
+                li
+                    a(href='javascript:void(0);')
+                        i.fa.fa-table
+                        span.submenu-title jPList with jQuery UI
+                        span.fa.arrow
+                    ul.nav.nav-third-level
+                        li
+                            a(ui-sref='grid-range-slider')
+                                i.fa.fa-angle-right
+                                span.submenu-title Range Slider
+                        li
+                            a(ui-sref='grid-datepicker')
+                                i.fa.fa-angle-right
+                                span.submenu-title Date Picker Filter
+        li
+            a(href='javascript:void(0);')
+                i.fa.fa-file-o.fa-fw
+                    .icon-bg.bg-yellow
+                span.menu-title Pages
+                span.fa.arrow
+            ul.nav.nav-second-level
+                li
+                    a(ui-sref='page-gallery')
+                        i.fa.fa-suitcase
+                        span.submenu-title Gallery
+                li
+                    a(ui-sref='page-timeline')
+                        i.fa.fa-steam
+                        span.submenu-title Timeline
+                li
+                    a(ui-sref='page-blog')
+                        i.fa.fa-puzzle-piece
+                        span.submenu-title Blog
+                li
+                    a(ui-sref='page-blog-item')
+                        i.fa.fa-chain
+                        span.submenu-title Blog Item
+                li
+                    a(ui-sref='page-about')
+                        i.fa.fa-group
+                        span.submenu-title About Us
+                li
+                    a(ui-sref='page-contact')
+                        i.fa.fa-send-o
+                        span.submenu-title Contact Us
+                li
+                    a(ui-sref='page-calendar')
+                        i.fa.fa-calendar
+                        span.submenu-title Full Calendar
+        li
+            a(href='javascript:void(0);')
+                i.fa.fa-gift.fa-fw
+                    .icon-bg.bg-grey
+                span.menu-title Extras
+                span.fa.arrow
+            ul.nav.nav-second-level
+                li
+                    a(ui-sref='extra-profile')
+                        i.fa.fa-user
+                        span.submenu-title User Profile
+                li
+                    a(ui-sref='extra-signin')
+                        i.fa.fa-sign-in
+                        span.submenu-title Sign In
+                li
+                    a(ui-sref='extra-signup')
+                        i.fa.fa-sign-out
+                        span.submenu-title Sign Up
+                li
+                    a(ui-sref='extra-lock-screen')
+                        i.fa.fa-lock
+                        span.submenu-title Lock Screen
+                li
+                    a(ui-sref='extra-user-list')
+                        i.fa.fa-user
+                        span.submenu-title User List
+                        span.label.label-yellow v2.1
+                li
+                    a(ui-sref='extra-invoice')
+                        i.fa.fa-print
+                        span.submenu-title Invoice
+                li
+                    a(ui-sref='extra-faq')
+                        i.fa.fa-graduation-cap
+                        span.submenu-title FAQ
+                li
+                    a(ui-sref='extra-pricing-table')
+                        i.fa.fa-money
+                        span.submenu-title Pricing Tables
+                li
+                    a(ui-sref='extra-blank')
+                        i.fa.fa-file-o
+                        span.submenu-title Blank
+                li
+                    a(ui-sref='extra-404')
+                        i.fa.fa-exclamation-circle
+                        span.submenu-title 404 Page
+                li
+                    a(ui-sref='extra-500')
+                        i.fa.fa-exclamation-circle
+                        span.submenu-title 500 Page
+                li
+                    a.btn-fullscreen(href='javascript:void(0)',title='FullScreen', ng-click="fullscreen()")
+                        i.fa.fa-arrows
+                        span.submenu-title Full Screen
+        li
+            a(href='javascript:void(0);')
+                i.fa.fa-sitemap.fa-fw
+                    .icon-bg.bg-dark
+                span.menu-title Multi-Level Dropdown
+                span.fa.arrow
+            ul.nav.nav-second-level
+                li
+                    a(href='javascript:void(0);')
+                        i.fa.fa-angle-right
+                        span.submenu-title Second Level Item
+                li
+                    a(href='javascript:void(0);')
+                        i.fa.fa-angle-right
+                        span.submenu-title Second Level Item
+                li
+                    a(href='javascript:void(0);')
+                        i.fa.fa-angle-right
+                        span.submenu-title Third Level
+                        span.fa.arrow
+                    ul.nav.nav-third-level
+                        li
+                            a(href='javascript:void(0);')
+                                i.fa.fa-angle-double-right
+                                span.submenu-title Third Level Item
+                        li
+                            a(href='javascript:void(0);')
+                                i.fa.fa-angle-double-right
+                                span.submenu-title Third Level Item
+                        li
+                            a(href='javascript:void(0);')
+                                i.fa.fa-angle-double-right
+                                span.submenu-title  Third Level Item
+                        li
+                            a(href='javascript:void(0);')
+                                i.fa.fa-angle-double-right
+                                span.submenu-title Third Level Item
+        li
+            a(href='javascript:void(0);')
+                i.fa.fa-envelope-o
+                    .icon-bg.bg-primary
+                span.menu-title Email
+                span.fa.arrow
+            ul.nav.nav-second-level
+                li
+                    a(ui-sref='email-inbox')
+                        i.fa.fa-inbox
+                        span.submenu-title Inbox
+                li
+                    a(ui-sref='email-compose-mail')
+                        i.fa.fa-pencil
+                        span.submenu-title Compose Mail
+                li
+                    a(ui-sref='email-view-mail')
+                        i.fa.fa-eye
+                        span.submenu-title View Mail
+        li
+            a(href='javascript:void(0);')
+                i.fa.fa-bar-chart-o.fa-fw
+                    .icon-bg.bg-orange
+                span.menu-title Charts
+                span.fa.arrow
+            ul.nav.nav-second-level
+                li
+                    a(ui-sref='charts-flotchart')
+                        i.fa.fa-angle-right
+                        span.submenu-title Flot Charts
+                li
+                    a(ui-sref='charts-chartjs')
+                        i.fa.fa-angle-right
+                        span.submenu-title Chartjs
+                li
+                    a(href='javascript:void(0);')
+                        i.fa.fa-angle-right
+                        span.submenu-title HighCharts
+                        span.fa.arrow
+                    ul.nav.nav-third-level
+                        li
+                            a(ui-sref='charts-highchart-line')
+                                i.fa.fa-angle-double-right
+                                span.submenu-title Line Charts
+                        li
+                            a(ui-sref='charts-highchart-area')
+                                i.fa.fa-angle-double-right
+                                span.submenu-title Area Charts
+                        li
+                            a(ui-sref='charts-highchart-pie')
+                                i.fa.fa-angle-double-right
+                                span.submenu-title Pie Charts
+                        li
+                            a(ui-sref='charts-highchart-scatter-bubble')
+                                i.fa.fa-angle-double-right
+                                span.submenu-title Scatter & Bubble Charts
+                        li
+                            a(ui-sref='charts-highchart-dynamic')
+                                i.fa.fa-angle-double-right
+                                span.submenu-title Dynamic Charts
+                        li
+                            a(ui-sref='charts-highchart-combinations')
+                                i.fa.fa-angle-double-right
+                                span.submenu-title Combinations
+                        li
+                            a(ui-sref='charts-highchart-more')
+                                i.fa.fa-angle-double-right
+                                span.submenu-title More Chart Types
+        li
+            a(ui-sref='animations')
+                i.fa.fa-slack.fa-fw
+                    .icon-bg.bg-green
+                span.menu-title Animations

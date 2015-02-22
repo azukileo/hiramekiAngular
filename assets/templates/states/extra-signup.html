@@ -1,0 +1,101 @@
+
+<div id="signup-page">
+  <div class="page-form">
+    <form name="singupForm" id="signup-form" ng-submit="submitSignup()" class="form signup-form">
+      <div class="header-content">
+        <h1>Register</h1>
+      </div>
+      <div class="body-content">
+        <div class="form-group" ng-class="{'has-error': singupForm.username.$invalid}">
+          <div class="input-icon right"><i class="fa fa-user"></i>
+            <input type="text" placeholder="Username" name="username" class="form-control" ng-model="signup.username" ng-minlength=7 ng-maxlength=15 ng-pattern="/^[a-zA-Z0-9]+$/" required/>
+            <div class="has-error" ng-show="singupForm.username.$dirty && singupForm.username.$invalid">
+                <label ng-show="singupForm.username.$error.pattern" for="inputError" class="control-label">Not a valid username.</label>
+                <label ng-show="singupForm.username.$error.required" for="inputError" class="control-label">Your username is required.</label>
+                <label ng-show="singupForm.username.$error.minlength" for="inputError" class="control-label">Your username must be greater than 7 charactors</label>
+                <label ng-show="singupForm.username.$error.maxlength" for="inputError" class="control-label">Your name cannot be greater than 15 charactors</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" ng-class="{'has-error': singupForm.email.$invalid}">
+          <div class="input-icon right"><i class="fa fa-envelope"></i>
+            <input type="email" placeholder="Email address" name="email" class="form-control" ng-model="signup.email" ng-maxlength=50 ng-pattern='/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/' required/>
+            <div class="has-error" ng-show="singupForm.email.$dirty && singupForm.email.$invalid">
+                <label ng-show="singupForm.email.$error.email" for="inputError" class="control-label">That is not a valid email</label>
+                <label ng-show="singupForm.email.$error.pattern" for="inputError" class="control-label">Not a valid email.</label>
+                <label ng-show="signupForm.email.$error.maxlength" for="inputError" class="control-label">Email address cannot be greater than 50 charactors</label>
+                <label ng-show="signupForm.email.$error.required" for="inputError" class="control-label">Email address is required.</label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group" ng-class="{'has-error': singupForm.password.$invalid}">
+          <div class="input-icon right"><i class="fa fa-key"></i>
+            <input id="password" type="password" placeholder="Password" name="password" class="form-control" ng-model="signup.password" ng-minlength=8 ng-maxlength=10 ng-pattern="/(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z])/" required/>
+            <label ng-show="singupForm.password.$error.required && singupForm.password.$dirty" for="inputError" class="control-label">required</label>
+            <label ng-show="!singupForm.password.$error.required && (singupForm.password.$error.minlength || singupForm.password.$error.maxlength) && myForm.password.$dirty" for="inputError" class="control-label">Passwords must be between 8 and 10 characters.</label>
+            <label ng-show="!singupForm.password.$error.required && !singupForm.password.$error.minlength && !singupForm.password.$error.maxlength && singupForm.password.$error.pattern && singupForm.password.$dirty" for="inputError" class="control-label">Must contain one uppercase letter, and alpha character and number</label>
+          </div>
+        </div>
+        <div class="form-group" ng-class="{'has-error': singupForm.passwordConfirm.$invalid}">
+          <div class="input-icon right"><i class="fa fa-key"></i>
+            <input type="password" placeholder="Confirm Password" name="passwordConfirm" class="form-control" ng-model="signup.passwordConfirm" ng-minlength=8 ng-maxlength=10 valid-password required/>
+            <label ng-show="singupForm.passwordConfirm.$error.minlength" for="inputError" class="control-label">Confirm Password must be greater than 8 charactors</label>
+            <label ng-show="singupForm.passwordConfirm.$error.maxlength" for="inputError" class="control-label">Confirm Password cannot be greater than 10 charactors</label>
+            <label ng-show="singupForm.passwordConfirm.$error.required && singupForm.passwordConfirm.$dirty" for="inputError" class="control-label">Please confirm your password.</label>
+            <label ng-show="!singupForm.passwordConfirm.$error.required && singupForm.passwordConfirm.$error.noMatch && singupForm.password.$dirty" for="inputError" class="control-label">Passwords do not match.</label>
+          </div>
+        </div>
+        <hr/>
+        <div style="margin-bottom: 15px" class="row">
+          <div class="col-lg-6" ng-class="{'has-error': singupForm.firstname.$invalid}">
+            <label>
+              <input type="text" placeholder="First Name" name="firstname" class="form-control" ng-model="signup.firstname" ng-minlength=1 ng-maxlength=20 required/>
+              <label ng-show="singupForm.firstname.$error.minlength" for="inputError" class="control-label">First Name must be greater than 1 charactors</label>
+              <label ng-show="singupForm.firstname.$error.maxlength" for="inputError" class="control-label">First Name cannot be greater than 20 charactors</label>
+              <label ng-show="singupForm.firstname.$error.required && singupForm.firstname.$dirty" for="inputError" class="control-label">First Name is required.</label>
+            </label>
+          </div>
+          <div class="col-lg-6" ng-class="{'has-error': singupForm.familyname.$invalid}">
+            <label>
+              <input type="text" placeholder="Last Name" name="familyname" class="form-control" ng-model="signup.familyname" ng-minlength=1 ng-maxlength=20 required/>
+              <label ng-show="singupForm.familyname.$error.minlength" for="inputError" class="control-label">Last Name must be greater than 1 charactors</label>
+              <label ng-show="singupForm.familyname.$error.maxlength" for="inputError" class="control-label">Last Name cannot be greater than 20 charactors</label>
+              <label ng-show="singupForm.familyname.$error.required && singupForm.familyname.$dirty" for="inputError" class="control-label">Last Name is required.</label>
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label style="display: block" class="select">
+            <select class="form-control" ng-model="signup.gender" ng-options="num as name for (num, name) in genders">
+              <option value="">Gender</option>
+            </select>
+          </label>
+        </div>
+        <div class="form-group">
+          <div class="checkbox-list">
+            <label>
+              <input id="subscription" type="checkbox" ng-model="signup.subscription" name="subscription"/>&nbsp;
+              I want to receive news and special offers
+            </label>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="checkbox-list">
+            <label>
+              <input id="terms" type="checkbox" ng-model="signup.terms" name="terms"/>&nbsp;
+              I agree with the Terms and Conditions
+            </label>
+          </div>
+        </div>
+        <hr/>
+        <div class="form-group mbn"><a href="/#/extra-signin" class="btn btn-warning"><i class="fa fa-chevron-circle-left"></i>&nbsp;
+            Back</a>
+          <button type="submit" ng-disabled="!singupForm.$valid" class="btn btn-info pull-right">
+            Submit
+            &nbsp;<i class="fa fa-chevron-circle-right"></i>
+          </button>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
